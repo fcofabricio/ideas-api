@@ -1,0 +1,38 @@
+---
+inherit_from: .rubocop-base.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
+require:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - !ruby/regexp /config\/initializers\/doorkeeper.rb/
+    - !ruby/regexp /spec\/rails_helper.rb/
+
+Metrics/AbcSize:
+  Exclude:
+    - !ruby/regexp /db\/.*?\.rb$/
+    - !ruby/regexp /config\/config\.rb$/
+    - !ruby/regexp /test\/support\/.*?\.rb$/
+
+Metrics/BlockLength:
+  Exclude:
+    - !ruby/regexp /config\/config\.rb$/
+    - !ruby/regexp /config\/routes\.rb$/
+    - !ruby/regexp /config\/routes\/.*?\.rb$/
+    - !ruby/regexp /test\/support\/factories\/.*?\.rb$/
+
+Layout/LineLength:
+  Exclude:
+    - !ruby/regexp /db\/.*?\.rb$/
+    - !ruby/regexp /config\/environments\/.*?\.rb$/
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/RefuteMethods:
+  Enabled: false
