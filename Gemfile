@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 ruby "3.1.2"
@@ -8,23 +10,11 @@ gem "pg", "~> 1.1"
 
 gem "puma", "~> 5.0"
 
-
-
-
-
-
-group :development, :test do
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-end
-
-group :development do
-end
-
-gem "rack-cors"
-gem "jsonapi-resources"
 gem "bcrypt"
 gem "doorkeeper"
 gem "health-monitor-rails"
+gem "jsonapi-resources"
+gem "rack-cors"
 
 group :development do
   gem "bullet"
@@ -32,12 +22,12 @@ group :development do
 end
 
 group :development, :test do
+  gem "coderay"
   gem "pry-rails"
   gem "rspec-rails"
-  gem "coderay"
   gem "rubocop"
-  gem "rubocop-rails"
   gem "rubocop-performance"
+  gem "rubocop-rails"
 end
 
 group :test do
