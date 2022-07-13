@@ -39,3 +39,8 @@ group :development, :test do
   gem "rubocop-rails"
   gem "rubocop-performance"
 end
+
+group :test do
+  gem "factory_bot_rails"
+  gem "rspec_junit_formatter"
+end
