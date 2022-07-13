@@ -25,3 +25,17 @@ gem "jsonapi-resources"
 gem "bcrypt"
 gem "doorkeeper"
 gem "health-monitor-rails"
+
+group :development do
+  gem "bullet"
+  gem "dotenv-rails"
+end
+
+group :development, :test do
+  gem "pry-rails"
+  gem "rspec-rails"
+  gem "coderay"
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-performance"
+end
