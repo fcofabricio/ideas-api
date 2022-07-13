@@ -1,7 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   use_doorkeeper
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  mount HealthMonitor::Engine, at: "/"
+  jsonapi_resources :users, only: %w[create]
 end
